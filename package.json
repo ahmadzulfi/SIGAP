@@ -1,0 +1,18 @@
+{
+  "name": "tanya-layanan",
+  "version": "0.1.0",
+  "description": "Tanya Layanan — asisten persyaratan dokumen kependudukan Kota Cimahi (front end + server kecil ke Langflow)",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "jawab-tiket": "node scripts/jawab-tiket.js",
+    "ambil-spp-bandung": "node scripts/ambil-spp-bandung.js",
+    "ingest-kb": "node scripts/ingest-kb.js",
+    "evaluasi": "node scripts/evaluasi.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

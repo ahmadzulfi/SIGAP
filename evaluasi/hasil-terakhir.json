@@ -1,0 +1,405 @@
+{
+  "cari": {
+    "total": 56,
+    "peringkat1": 42,
+    "dalam8": 56,
+    "meleset": [
+      {
+        "judul": "Kabupaten Bandung Barat – Penerbitan Akta Kelahiran – Umum",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Penerbitan Akta Kelahiran – Umum"
+      },
+      {
+        "judul": "Kabupaten Bandung Barat – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el baru bagi Penduduk WNI",
+        "peringkat": 3,
+        "teratas": "Kabupaten Bandung Barat – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena Pindah Datang bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kabupaten Bandung Barat – Kartu Keluarga – Penerbitan Kartu Keluarga karena perubahan data bagi Penduduk WNI",
+        "peringkat": 3,
+        "teratas": "Kabupaten Bandung Barat – Kartu Keluarga – Penerbitan Kartu Keluarga baru bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kabupaten Bandung – Informasi Umum Pelayanan Disdukcapil Kabupaten Bandung",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Informasi Umum Pelayanan Disdukcapil Kota Bandung"
+      },
+      {
+        "judul": "Kabupaten Bandung – Penerbitan Akta Kelahiran – Umum",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Penerbitan Akta Kelahiran – Umum"
+      },
+      {
+        "judul": "Kabupaten Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el baru bagi Penduduk WNI",
+        "peringkat": 2,
+        "teratas": "Kabupaten Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena Pindah Datang bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kabupaten Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena hilang atau rusak bagi Penduduk WNI",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena hilang atau rusak bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kabupaten Bandung – Kartu Identitas Anak (KIA) – Umum",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Kartu Identitas Anak (KIA) – Umum"
+      },
+      {
+        "judul": "Kabupaten Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga baru bagi Penduduk WNI",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga baru karena membentuk keluarga baru bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kabupaten Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga karena perubahan data bagi Penduduk WNI",
+        "peringkat": 4,
+        "teratas": "Kota Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga karena perubahan data bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kota Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga baru karena pisah kk bagi Penduduk WNI",
+        "peringkat": 2,
+        "teratas": "Kota Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga baru karena membentuk keluarga baru bagi Penduduk WNI"
+      },
+      {
+        "judul": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el baru bagi Penduduk WNI",
+        "peringkat": 3,
+        "teratas": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena Pindah Datang bagi Penduduk WNI dalam wilayah Negara Kesatuan Republik Indonesia"
+      },
+      {
+        "judul": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena Pindah Datang bagi Penduduk WNI dalam wilayah Negara Kesatuan Republik Indonesia",
+        "peringkat": 2,
+        "teratas": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena Pindah Datang bagi WNI yang datang dari luar wilayah Negara Kesatuan Republik Indonesia"
+      },
+      {
+        "judul": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena perpanjangan bagi Penduduk Orang Asing yang memiliki izin tinggal tetap",
+        "peringkat": 2,
+        "teratas": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el baru bagi Penduduk Orang Asing yang memiliki izin tinggal tetap"
+      }
+    ]
+  },
+  "tanya": [
+    {
+      "no": 1,
+      "pertanyaan": "Saya warga Cimahi, baru menikah, mau bikin KK sendiri. Syaratnya apa?",
+      "harap": "jawaban / tanya_balik",
+      "jenis": "jawaban",
+      "judulKb": "Kota Cimahi – Kartu Keluarga – Penerbitan Kartu Keluarga baru karena membentuk keluarga baru bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 3,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 14.5,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 2,
+      "pertanyaan": "KTP-el saya hilang, saya tinggal di Cimahi. Apa yang harus dibawa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Cimahi – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena hilang atau rusak bagi Penduduk WNI atau Orang Asing yang memiliki izin tinggal tetap",
+      "kategori": "",
+      "berkasLolos": 4,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 13,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 3,
+      "pertanyaan": "Anak saya baru lahir di Cimahi, mau bikin akta kelahiran. Bawa apa saja?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Cimahi – Penerbitan Akta Kelahiran – Umum",
+      "kategori": "",
+      "berkasLolos": 5,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 12,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 4,
+      "pertanyaan": "Syarat bikin KIA untuk anak umur 5 tahun di Kota Cimahi apa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Cimahi – Kartu Identitas Anak (KIA) – Umum",
+      "kategori": "",
+      "berkasLolos": 4,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 10.3,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 5,
+      "pertanyaan": "Saya mau pindah keluar dari Cimahi ke Jakarta, syaratnya apa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Cimahi – Pindah Keluar – Umum",
+      "kategori": "",
+      "berkasLolos": 2,
+      "berkasDitolak": [],
+      "langkahDitolak": [
+        "Kamu menerima Surat Keterangan Pindah Warga Negara Indonesia melalui email"
+      ],
+      "detik": 12.9,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 6,
+      "pertanyaan": "Saya warga Kota Bandung, mau ganti alamat di KK karena pindah rumah masih di Bandung.",
+      "harap": "jawaban / tanya_balik",
+      "jenis": "jawaban",
+      "judulKb": "Kota Bandung – Kartu Keluarga – Penerbitan Kartu Keluarga karena perubahan data bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 2,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 11.9,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 7,
+      "pertanyaan": "Bikin KTP-el pertama kali di Kota Bandung, umur 17 tahun, bawa apa aja?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el baru bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 2,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 12.5,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 8,
+      "pertanyaan": "Anak saya lahir di Kota Bandung, syarat akta kelahirannya apa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kota Bandung – Penerbitan Akta Kelahiran – Umum",
+      "kategori": "",
+      "berkasLolos": 6,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 14.5,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 9,
+      "pertanyaan": "Saya pindah datang ke Kota Bandung dari Garut, apa yang perlu dibawa?",
+      "harap": "jawaban / tanya_balik",
+      "jenis": "jawaban",
+      "judulKb": "Kota Bandung – Pindah Datang – Umum",
+      "kategori": "",
+      "berkasLolos": 4,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 11.8,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 10,
+      "pertanyaan": "Saya warga Soreang, KK saya rusak kena banjir. Mau ganti, syaratnya apa?",
+      "harap": "jawaban",
+      "jenis": "teruskan",
+      "judulKb": "",
+      "kategori": "keadaan_khusus",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 12.7,
+      "benar": false,
+      "alasan": "jenis teruskan, harusnya jawaban"
+    },
+    {
+      "no": 11,
+      "pertanyaan": "Saya di Baleendah, mau bikin KIA buat anak saya. Syaratnya apa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kabupaten Bandung – Kartu Identitas Anak (KIA) – Umum",
+      "kategori": "",
+      "berkasLolos": 5,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 11.6,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 12,
+      "pertanyaan": "Tanggal lahir di KTP-el saya salah, mau diganti. Saya warga Kabupaten Bandung.",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kabupaten Bandung – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena perubahan data bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 4,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 14.1,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 13,
+      "pertanyaan": "Saya tinggal di Lembang, baru menikah dan mau buat KK baru. Bawa apa saja?",
+      "harap": "jawaban / tanya_balik",
+      "jenis": "jawaban",
+      "judulKb": "Kabupaten Bandung Barat – Kartu Keluarga – Penerbitan Kartu Keluarga baru bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 4,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 17.3,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 14,
+      "pertanyaan": "Warga Padalarang, KTP-el saya hilang. Syarat bikin lagi apa?",
+      "harap": "jawaban",
+      "jenis": "jawaban",
+      "judulKb": "Kabupaten Bandung Barat – Kartu Tanda Penduduk Elektronik (KTP-El) – Penerbitan KTP-el karena hilang atau rusak bagi Penduduk WNI",
+      "kategori": "",
+      "berkasLolos": 2,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 16.2,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 15,
+      "pertanyaan": "Mau bikin KIA buat anak, saya tinggal di Ngamprah.",
+      "harap": "teruskan",
+      "jenis": "teruskan",
+      "judulKb": "",
+      "kategori": "tidak_diatur",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 2.8,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 16,
+      "pertanyaan": "Saya warga Cimahi, buku nikah saya hilang. Bisa urus KK baru dulu nggak?",
+      "harap": "teruskan",
+      "jenis": "tanya_balik",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 4.6,
+      "benar": false,
+      "alasan": "jenis tanya_balik, harusnya teruskan"
+    },
+    {
+      "no": 17,
+      "pertanyaan": "Syarat bikin paspor apa aja? Saya warga Cimahi.",
+      "harap": "luar_cakupan",
+      "jenis": "luar_cakupan",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 3.4,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 18,
+      "pertanyaan": "Perpanjang SIM A di Kota Bandung bawa apa saja?",
+      "harap": "luar_cakupan",
+      "jenis": "luar_cakupan",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 3.6,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 19,
+      "pertanyaan": "Cara daftar BPJS Kesehatan untuk satu keluarga di Kabupaten Bandung bagaimana?",
+      "harap": "luar_cakupan",
+      "jenis": "luar_cakupan",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 3.4,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 20,
+      "pertanyaan": "Syarat bikin KTP-el baru apa saja?",
+      "harap": "tanya_balik",
+      "jenis": "tanya_balik",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 0,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 21,
+      "pertanyaan": "Saya warga Cimahi, anak saya baru lahir. Dokumen apa yang perlu diurus?",
+      "harap": "paket",
+      "jenis": "paket",
+      "judulKb": "Kota Cimahi – Penerbitan Akta Kelahiran – Umum → Kota Cimahi – Kartu Keluarga – Penerbitan Kartu Keluarga karena penambahan anggota keluarga (kelahiran) bagi Penduduk WNI → Kota Cimahi – Kartu Identitas Anak (KIA) – Umum",
+      "kategori": "",
+      "berkasLolos": 10,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 22.5,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 22,
+      "pertanyaan": "Saya tinggal di Ngamprah, anak saya baru lahir. Apa saja yang perlu diurus?",
+      "harap": "paket",
+      "jenis": "paket",
+      "judulKb": "Kabupaten Bandung Barat – Penerbitan Akta Kelahiran – Umum → Kabupaten Bandung Barat – Kartu Keluarga – Penerbitan Kartu Keluarga karena perubahan data bagi Penduduk WNI → (KIA: tidak tercantum)",
+      "kategori": "",
+      "berkasLolos": 6,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 17.8,
+      "benar": true,
+      "alasan": ""
+    },
+    {
+      "no": 23,
+      "pertanyaan": "Saya warga Cimahi, mau pindah rumah. Dokumen apa yang perlu diurus?",
+      "harap": "tanya_balik",
+      "jenis": "tanya_balik",
+      "judulKb": "",
+      "kategori": "",
+      "berkasLolos": 0,
+      "berkasDitolak": [],
+      "langkahDitolak": [],
+      "detik": 4.8,
+      "benar": true,
+      "alasan": ""
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Secrets
+.env
+
+# Runtime data (tickets and ratings from citizens)
+data/*.json
+
+node_modules/

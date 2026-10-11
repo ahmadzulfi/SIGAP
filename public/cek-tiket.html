@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek tiket — Tanya Layanan Bandung Raya</title>
+    <meta name="description" content="Lihat jawaban petugas Disdukcapil dengan kode tiket." />
+
+    <!-- Tailwind CSS CDN + design tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- Google Fonts: Public Sans (headings), Atkinson Hyperlegible Next (body), Atkinson Hyperlegible Mono (ticket codes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Public+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col bg-kertas font-sans text-tinta antialiased">
+
+    <a href="#konten"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50
+             focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg">
+      Langsung ke isi
+    </a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="bg-white">
+      <!-- Info strip: this is an AI assistant, and where its answers come from -->
+      <div class="bg-malam">
+        <p class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 py-1.5 lg:py-2 flex items-center gap-1.5 lg:gap-2
+                  text-xs leading-[18px] lg:text-[13px] lg:leading-5 text-tinta-terang">
+          <img src="assets/ikon/info-strip-hp.svg" width="14" height="14" alt="" class="shrink-0 lg:hidden" />
+          <img src="assets/ikon/info-strip.svg" width="16" height="16" alt="" class="shrink-0 hidden lg:block" />
+          <span class="lg:hidden">Asisten AI · cek lagi sebelum ke kantor layanan</span>
+          <span class="hidden lg:inline">
+            Asisten informasi berbasis AI. Sumber: standar pelayanan dan peraturan Disdukcapil di Bandung Raya.
+            Cek lagi sebelum datang ke kantor layanan.
+          </span>
+        </p>
+      </div>
+
+      <nav aria-label="Navigasi utama" class="border-b border-garis">
+        <div class="mx-auto max-w-konten pl-4 pr-3 lg:px-5 xl:px-0 py-2.5 lg:py-3.5 flex items-center justify-between gap-4">
+          <a href="/" class="min-w-0 flex items-center gap-2.5 lg:gap-3">
+            <span class="shrink-0 bg-cap rounded-[9px] lg:rounded-[10px] size-[34px] lg:size-10 flex items-center justify-center">
+              <img src="assets/ikon/shield-check-hp.svg" width="18" height="18" alt="" class="lg:hidden" />
+              <img src="assets/ikon/shield-check-logo.svg" width="22" height="22" alt="" class="hidden lg:block" />
+            </span>
+            <span class="min-w-0 flex flex-col">
+              <span class="font-judul font-bold text-lg leading-6 lg:text-xl lg:leading-[26px] whitespace-nowrap">Tanya Layanan</span>
+              <span class="hidden md:block text-[13px] leading-[18px] text-tinta-lembut truncate">
+                Persyaratan dokumen kependudukan Bandung Raya
+              </span>
+            </span>
+          </a>
+          <div class="shrink-0 flex items-center gap-2">
+            <a href="/"
+              class="inline-flex px-3 sm:px-4 py-2.5 rounded-lg font-semibold sm:font-medium text-[15px] leading-[22px]
+                     sm:text-base sm:leading-6 text-tinta-isi hover:bg-abu whitespace-nowrap transition-colors">Tanya</a>
+            <a href="cek-tiket.html" aria-current="page"
+              class="hidden sm:inline-flex bg-cap-muda text-cap font-bold px-4 py-2.5 rounded-lg whitespace-nowrap">Cek tiket</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== WEB 07: CEK TIKET ===== -->
+    <main id="konten"
+      class="flex-1 mx-auto w-full max-w-konten px-4 lg:px-5 xl:px-0 pt-8 pb-12 lg:pt-16 lg:pb-24
+             flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+      <!-- Kolom cek -->
+      <div class="lg:w-[700px] shrink-0 flex flex-col gap-7">
+        <div class="flex flex-col gap-2.5">
+          <h1 class="font-judul font-bold text-[36px] leading-[44px] lg:text-5xl lg:leading-[56px] tracking-[-0.5px]">
+            Cek jawaban petugas
+          </h1>
+          <p class="text-[17px] leading-7 lg:text-[19px] lg:leading-[30px] text-tinta-lembut">
+            Masukkan kode tiket yang kamu dapat saat pertanyaanmu diteruskan ke petugas.
+          </p>
+        </div>
+
+        <form id="form-tiket" class="flex flex-col gap-2" novalidate>
+          <label for="input-kode" class="font-bold">Kode tiket</label>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="kotak-isian flex-1 min-w-0 bg-white border-[1.5px] border-garis-tegas rounded-[10px] px-5 py-3.5 flex">
+              <input
+                id="input-kode"
+                type="text"
+                maxlength="12"
+                autocomplete="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                placeholder="TL-XXXXXX"
+                aria-describedby="petunjuk-kode galat-tiket"
+                class="w-full min-w-0 bg-transparent font-mono font-bold text-[22px] leading-[30px] uppercase
+                       placeholder:font-sans placeholder:font-normal placeholder:text-tinta-samar"
+              />
+            </div>
+            <button type="submit" class="tombol-utama shrink-0 px-6 py-4 leading-6">
+              <img src="assets/ikon/search.svg" width="18" height="18" alt="" />
+              Cek tiket
+            </button>
+          </div>
+          <p id="petunjuk-kode" class="text-sm leading-5 text-tinta-lembut">
+            Formatnya TL- diikuti 6 huruf atau angka. Huruf besar atau kecil sama saja.
+          </p>
+
+          <!-- Inline validation / not-found message; filled by cek-tiket.js -->
+          <div id="galat-tiket" role="alert"
+            class="hidden mt-2 bg-galat-muda border border-galat-garis rounded-xl px-4 py-3.5 lg:px-5 lg:py-4 flex-col gap-1.5">
+            <p class="flex items-center gap-2 text-[15px] leading-[22px] font-bold text-galat-tua">
+              <img src="assets/ikon/alert.svg" width="18" height="18" alt="" class="shrink-0" />
+              <span id="judul-galat-tiket"></span>
+            </p>
+            <p id="isi-galat-tiket" class="text-sm leading-[22px] text-galat-gelap"></p>
+          </div>
+        </form>
+
+        <!-- Hasil tiket (filled by cek-tiket.js) -->
+        <section id="hasil-tiket" aria-live="polite" aria-label="Hasil tiket"></section>
+      </div>
+
+      <!-- Kolom bantuan -->
+      <aside aria-label="Bantuan" class="flex-1 min-w-0 flex flex-col gap-4">
+        <section aria-labelledby="judul-bantuan"
+          class="bg-white border border-garis rounded-2xl p-5 lg:p-6 flex flex-col gap-3">
+          <span class="bg-cap-muda rounded-[10px] size-10 flex items-center justify-center">
+            <img src="assets/ikon/help-aksen-20.svg" width="20" height="20" alt="" />
+          </span>
+          <h2 id="judul-bantuan" class="font-judul font-bold text-xl leading-7">Belum punya kode?</h2>
+          <p class="text-[15px] leading-6 text-tinta-isi">
+            Kode tiket muncul kalau pertanyaanmu diteruskan ke petugas. Kalau kodenya hilang, ajukan lagi
+            pertanyaanmu di halaman Tanya.
+          </p>
+          <a href="/" class="self-start pt-1 inline-flex items-center gap-1.5 text-[15px] leading-[22px] font-bold text-cap underline">
+            <img src="assets/ikon/arrow-left.svg" width="18" height="18" alt="" />
+            Kembali ke halaman Tanya
+          </a>
+        </section>
+
+        <section aria-labelledby="judul-arti-status"
+          class="bg-white border border-garis rounded-2xl p-5 lg:p-6 flex flex-col gap-3.5">
+          <h2 id="judul-arti-status" class="font-judul font-bold text-lg leading-[26px]">Arti status tiket</h2>
+          <div class="flex flex-col gap-1.5">
+            <p class="self-start inline-flex items-center gap-1.5 bg-tiket text-tiket-tua rounded-full pl-2.5 pr-3 py-1
+                      text-[13px] leading-[18px] font-semibold">
+              <img src="assets/ikon/clock-amber-14.svg" width="14" height="14" alt="" class="shrink-0" />
+              Menunggu petugas
+            </p>
+            <p class="text-sm leading-[22px] text-tinta-lembut">Pertanyaanmu sudah masuk dan menunggu dijawab.</p>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <p class="self-start inline-flex items-center gap-1.5 bg-lengkap-muda text-lengkap-tua rounded-full pl-2.5 pr-3 py-1
+                      text-[13px] leading-[18px] font-semibold">
+              <img src="assets/ikon/check-hijau.svg" width="14" height="14" alt="" class="shrink-0" />
+              Sudah dijawab
+            </p>
+            <p class="text-sm leading-[22px] text-tinta-lembut">Jawaban petugas sudah bisa dibaca di sini.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-malam mt-auto">
+      <div class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-7 pb-8 lg:pt-12 flex flex-col gap-6 lg:gap-8">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-12">
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/phone-footer-hp.svg" width="18" height="18" alt="" class="shrink-0 lg:hidden" />
+              <img src="assets/ikon/phone-footer.svg" width="20" height="20" alt="" class="shrink-0 hidden lg:block" />
+              Butuh bantuan?
+            </h2>
+            <!-- Kanal resmi from the "Informasi Umum" sections of each region in kb/ -->
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">Hubungi Disdukcapil di daerahmu:</p>
+            <ul class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              <li>
+                <span class="font-semibold text-white">Kota Bandung</span> —
+                <a href="tel:+62224209891" class="text-cap-terang underline">(022) 4209891</a>,
+                <a href="mailto:disdukcapilkotabdg@gmail.com" class="text-cap-terang underline break-words">disdukcapilkotabdg@gmail.com</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kota Cimahi</span> —
+                <a href="tel:+62226631885" class="text-cap-terang underline">(022) 6631885</a>, SMS PESDUK
+                <a href="sms:081221700800" class="text-cap-terang underline">081221700800</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kabupaten Bandung</span> —
+                <a href="https://disdukcapil.bandungkab.go.id" target="_blank" rel="noopener" class="text-cap-terang underline">disdukcapil.bandungkab.go.id</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kabupaten Bandung Barat</span> —
+                <a href="https://disdukcapil.bandungbaratkab.go.id" target="_blank" rel="noopener" class="text-cap-terang underline break-words">disdukcapil.bandungbaratkab.go.id</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/file-text-footer-hp.svg" width="18" height="18" alt="" class="shrink-0 lg:hidden" />
+              <img src="assets/ikon/file-text-footer.svg" width="20" height="20" alt="" class="shrink-0 hidden lg:block" />
+              Sumber informasi
+            </h2>
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              Standar pelayanan dan peraturan Disdukcapil Kota Bandung, Kabupaten Bandung, Kabupaten Bandung
+              Barat, dan Kota Cimahi. AI bisa keliru, jadi cek lagi sebelum datang ke kantor layanan.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/lock-footer.svg" width="20" height="20" alt="" class="shrink-0" />
+              Jaga data pribadimu
+            </h2>
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              Jangan tulis NIK, nomor KK, atau alamat lengkap di kolom pertanyaan. Yang dibutuhkan hanya keadaanmu,
+              bukan identitasmu.
+            </p>
+          </div>
+        </div>
+        <div class="h-px bg-tinta-garis"></div>
+        <p class="text-[13px] leading-5 text-tinta-redup">
+          Prototipe Tanya Layanan · Bandung Raya · Bukan situs resmi pemerintah
+        </p>
+      </div>
+    </footer>
+
+    <script src="cek-tiket.js"></script>
+  </body>
+</html>

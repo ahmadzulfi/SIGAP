@@ -1,0 +1,161 @@
+[
+  {
+    "pertanyaan": "Saya warga Cimahi, baru menikah, mau bikin KK sendiri. Syaratnya apa?",
+    "jenis": ["jawaban", "tanya_balik"],
+    "judul": "^Kota Cimahi – Kartu Keluarga – .*baru"
+  },
+  {
+    "pertanyaan": "KTP-el saya hilang, saya tinggal di Cimahi. Apa yang harus dibawa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Cimahi – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*(hilang|rusak)"
+  },
+  {
+    "pertanyaan": "Anak saya baru lahir di Cimahi, mau bikin akta kelahiran. Bawa apa saja?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Cimahi – Penerbitan Akta Kelahiran"
+  },
+  {
+    "pertanyaan": "Syarat bikin KIA untuk anak umur 5 tahun di Kota Cimahi apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Cimahi – Kartu Identitas Anak"
+  },
+  {
+    "pertanyaan": "Saya mau pindah keluar dari Cimahi ke Jakarta, syaratnya apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Cimahi – Pindah Keluar"
+  },
+  {
+    "pertanyaan": "Saya warga Kota Bandung, mau ganti alamat di KK karena pindah rumah masih di Bandung.",
+    "jenis": ["jawaban", "tanya_balik"],
+    "judul": "^Kota Bandung – Kartu Keluarga – "
+  },
+  {
+    "pertanyaan": "Bikin KTP-el pertama kali di Kota Bandung, umur 17 tahun, bawa apa aja?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Bandung – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*baru"
+  },
+  {
+    "pertanyaan": "Anak saya lahir di Kota Bandung, syarat akta kelahirannya apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kota Bandung – Penerbitan Akta Kelahiran"
+  },
+  {
+    "pertanyaan": "Saya pindah datang ke Kota Bandung dari Garut, apa yang perlu dibawa?",
+    "jenis": ["jawaban", "tanya_balik"],
+    "judul": "^Kota Bandung – .*[Pp]indah [Dd]atang"
+  },
+  {
+    "pertanyaan": "Saya warga Soreang, KK saya rusak kena banjir. Mau ganti, syaratnya apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kabupaten Bandung – Kartu Keluarga – .*(rusak|hilang)"
+  },
+  {
+    "pertanyaan": "Saya di Baleendah, mau bikin KIA buat anak saya. Syaratnya apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kabupaten Bandung – Kartu Identitas Anak"
+  },
+  {
+    "pertanyaan": "Tanggal lahir di KTP-el saya salah, mau diganti. Saya warga Kabupaten Bandung.",
+    "jenis": ["jawaban"],
+    "judul": "^Kabupaten Bandung – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*perubahan"
+  },
+  {
+    "pertanyaan": "Saya tinggal di Lembang, baru menikah dan mau buat KK baru. Bawa apa saja?",
+    "jenis": ["jawaban", "tanya_balik"],
+    "judul": "^Kabupaten Bandung Barat – Kartu Keluarga – .*baru"
+  },
+  {
+    "pertanyaan": "Warga Padalarang, KTP-el saya hilang. Syarat bikin lagi apa?",
+    "jenis": ["jawaban"],
+    "judul": "^Kabupaten Bandung Barat – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*(hilang|rusak)"
+  },
+  {
+    "pertanyaan": "Mau bikin KIA buat anak, saya tinggal di Ngamprah.",
+    "jenis": ["teruskan"],
+    "kategori": "tidak_diatur",
+    "catatan": "KIA tidak diatur di Perda KBB 3/2023, jadi harus diteruskan, bukan dikarang"
+  },
+  {
+    "pertanyaan": "Saya warga Cimahi, buku nikah saya hilang. Bisa urus KK baru dulu nggak?",
+    "jenis": ["teruskan"],
+    "kategori": "keadaan_khusus",
+    "catatan": "Keadaan khusus yang tidak tercantum di SPP Cimahi"
+  },
+  {
+    "pertanyaan": "Syarat bikin paspor apa aja? Saya warga Cimahi.",
+    "jenis": ["luar_cakupan"]
+  },
+  {
+    "pertanyaan": "Perpanjang SIM A di Kota Bandung bawa apa saja?",
+    "jenis": ["luar_cakupan"]
+  },
+  {
+    "pertanyaan": "Cara daftar BPJS Kesehatan untuk satu keluarga di Kabupaten Bandung bagaimana?",
+    "jenis": ["luar_cakupan"]
+  },
+  {
+    "pertanyaan": "Syarat bikin KTP-el baru apa saja?",
+    "jenis": ["tanya_balik"],
+    "tanyaWilayah": true,
+    "catatan": "Tidak menyebut daerah, jadi AI harus menanyakan daerahnya dulu"
+  },
+  {
+    "pertanyaan": "Saya warga Cimahi, anak saya baru lahir. Dokumen apa yang perlu diurus?",
+    "jenis": ["paket"],
+    "langkah": [
+      "^Kota Cimahi – Penerbitan Akta Kelahiran",
+      "^Kota Cimahi – Kartu Keluarga – .*kelahiran",
+      "^Kota Cimahi – Kartu Identitas Anak"
+    ],
+    "catatan": "Paket peristiwa hidup: akta → KK penambahan anggota → KIA"
+  },
+  {
+    "pertanyaan": "Saya tinggal di Ngamprah, anak saya baru lahir. Apa saja yang perlu diurus?",
+    "jenis": ["paket"],
+    "langkah": [
+      "^Kabupaten Bandung Barat – Penerbitan Akta Kelahiran",
+      "^Kabupaten Bandung Barat – Kartu Keluarga – ",
+      "^$"
+    ],
+    "catatan": "KIA tidak diatur di Perda KBB, jadi langkah ketiga harus tercatat sebagai tidak tercantum"
+  },
+  {
+    "pertanyaan": "Saya warga Cimahi, mau pindah rumah. Dokumen apa yang perlu diurus?",
+    "jenis": ["tanya_balik"],
+    "catatan": "Tujuan pindah menentukan layanannya, jadi perencana harus bertanya dulu"
+  },
+  {
+    "pertanyaan": "Saya warga Kota Bandung, istri saya habis lahiran. Harus ngurus apa aja?",
+    "jenis": ["paket"],
+    "langkah": [
+      "^Kota Bandung – Penerbitan Akta Kelahiran",
+      "^Kota Bandung – Kartu Keluarga – .*perubahan data",
+      "^Kota Bandung – Kartu Identitas Anak"
+    ],
+    "catatan": "Bahasa sehari-hari (lahiran); Kota Bandung tidak punya KK penambahan anggota, jadi memakai KK perubahan data"
+  },
+  {
+    "pertanyaan": "Saya tinggal di Soreang, habis nikah minggu lalu. Dokumen apa yang perlu diurus?",
+    "jenis": ["paket"],
+    "langkah": [
+      "^Kabupaten Bandung – Kartu Keluarga – .*baru",
+      "^Kabupaten Bandung – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*perubahan data"
+    ],
+    "catatan": "Menikah: KK baru, lalu KTP-el karena perubahan status perkawinan"
+  },
+  {
+    "pertanyaan": "Saya warga Cimahi, ayah saya meninggal minggu lalu. Apa saja yang perlu diurus?",
+    "jenis": ["tanya_balik"],
+    "catatan": "Belum jelas apakah yang meninggal kepala keluarga, jadi perencana harus bertanya dulu"
+  },
+  {
+    "pertanyaan": "Saya warga Cimahi, istri saya meninggal dunia dan saya kepala keluarganya. Apa saja yang perlu diurus?",
+    "jenis": ["paket"],
+    "langkah": [
+      "^$",
+      "^Kota Cimahi – Kartu Keluarga – .*perubahan data",
+      "^Kota Cimahi – Kartu Tanda Penduduk Elektronik \\(KTP-El\\) – .*perubahan data"
+    ],
+    "catatan": "Akta kematian tidak ada di dokumen Cimahi (diteruskan ke petugas); KK dan KTP-el karena perubahan data"
+  }
+]

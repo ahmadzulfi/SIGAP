@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman petugas — Tanya Layanan</title>
+    <meta name="robots" content="noindex" />
+
+    <!-- Tailwind CSS CDN + design tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- Google Fonts: Public Sans (headings), Atkinson Hyperlegible Next (body), Atkinson Hyperlegible Mono (ticket codes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Public+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col bg-kertas font-sans text-tinta antialiased">
+
+    <a href="#konten"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50
+             focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg">
+      Langsung ke isi
+    </a>
+
+    <!-- ===== TOP BAR (Web 08) ===== -->
+    <header class="tidak-dicetak bg-malam">
+      <div class="px-4 lg:px-8 py-3 lg:py-3.5 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+        <div class="flex items-center gap-3">
+          <span class="shrink-0 bg-cap rounded-[10px] size-9 flex items-center justify-center">
+            <img src="assets/ikon/shield-check-20.svg" width="20" height="20" alt="" />
+          </span>
+          <span class="font-judul font-bold text-lg leading-[26px] text-white whitespace-nowrap">Tanya Layanan</span>
+          <span class="bg-[#1e293b] text-cap-terang rounded-full pl-2.5 pr-3 py-1 text-[13px] leading-[18px] font-semibold whitespace-nowrap">
+            Halaman petugas
+          </span>
+        </div>
+
+        <!-- Views: ticket inbox and the report for the local government -->
+        <nav aria-label="Menu petugas" class="order-last lg:order-none w-full lg:w-auto lg:flex-1 flex gap-1">
+          <a href="#tiket" data-tampilan="tiket"
+            class="tautan-tampilan flex-1 lg:flex-none text-center px-4 py-2 rounded-lg text-[15px] leading-[22px] font-semibold text-tinta-terang hover:text-white">
+            Tiket dari warga
+          </a>
+          <a href="#laporan" data-tampilan="laporan"
+            class="tautan-tampilan flex-1 lg:flex-none text-center px-4 py-2 rounded-lg text-[15px] leading-[22px] font-semibold text-tinta-terang hover:text-white">
+            Laporan untuk pemda
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:flex items-center gap-2">
+            <span class="bg-[#1e293b] rounded-full size-8 flex items-center justify-center">
+              <img src="assets/ikon/user-terang.svg" width="18" height="18" alt="" />
+            </span>
+            <span class="text-[15px] leading-[22px] font-medium text-tinta-terang whitespace-nowrap">Petugas Disdukcapil</span>
+          </span>
+          <button type="button" id="tombol-keluar"
+            class="flex items-center gap-1.5 border border-tinta-lembut rounded-lg px-3 py-2 text-sm leading-5 font-semibold
+                   text-tinta-terang hover:bg-[#1e293b] transition-colors">
+            <img src="assets/ikon/log-out.svg" width="16" height="16" alt="" />
+            Keluar
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="konten" class="flex-1 flex flex-col">
+
+      <!-- ===== KUNCI PETUGAS (only when PETUGAS_KUNCI is set on the server) ===== -->
+      <section id="tampilan-kunci" class="hidden flex-1 px-4 py-16">
+        <form id="form-kunci" class="mx-auto max-w-[420px] bg-white border border-garis rounded-2xl p-6 lg:p-8 flex flex-col gap-4" novalidate>
+          <h1 class="font-judul font-bold text-2xl leading-8">Masuk halaman petugas</h1>
+          <p class="text-[15px] leading-6 text-tinta-lembut">Masukkan kunci petugas yang diberikan admin Tanya Layanan.</p>
+          <label for="input-kunci" class="font-bold">Kunci petugas</label>
+          <div class="kotak-isian bg-white border-[1.5px] border-garis-tegas rounded-[10px] px-4 py-3 flex">
+            <input id="input-kunci" type="password" autocomplete="current-password" class="w-full bg-transparent" />
+          </div>
+          <p id="galat-kunci" class="hidden text-sm font-semibold text-galat" role="alert"></p>
+          <button type="submit" class="tombol-utama px-6 py-3.5 leading-6">Masuk</button>
+        </form>
+      </section>
+
+      <!-- ===== WEB 08: TIKET DARI WARGA ===== -->
+      <section id="tampilan-tiket" class="hidden flex-1 flex flex-col lg:flex-row">
+
+        <!-- Daftar tiket -->
+        <div class="lg:w-[560px] shrink-0 lg:border-r border-garis px-4 lg:pl-8 lg:pr-6 pt-6 lg:pt-7 pb-8 flex flex-col gap-5">
+          <h1 class="font-judul font-bold text-2xl leading-8 lg:text-[26px] lg:leading-[34px]">Tiket dari warga</h1>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-white border border-garis rounded-xl p-4 flex items-center gap-3">
+              <span class="shrink-0 bg-lengkap-muda rounded-[10px] size-11 flex items-center justify-center">
+                <img src="assets/ikon/bot.svg" width="22" height="22" alt="" />
+              </span>
+              <span class="min-w-0 flex flex-col">
+                <span id="kpi-dijawab-ai" class="font-judul font-bold text-[28px] leading-[34px]">–</span>
+                <span class="text-sm leading-5 text-tinta-lembut">dijawab AI hari ini</span>
+              </span>
+            </div>
+            <div class="bg-white border border-garis rounded-xl p-4 flex items-center gap-3">
+              <span class="shrink-0 bg-tiket rounded-[10px] size-11 flex items-center justify-center">
+                <img src="assets/ikon/inbox.svg" width="22" height="22" alt="" />
+              </span>
+              <span class="min-w-0 flex flex-col">
+                <span id="kpi-diteruskan" class="font-judul font-bold text-[28px] leading-[34px]">–</span>
+                <span class="text-sm leading-5 text-tinta-lembut">diteruskan hari ini</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="bg-abu rounded-[10px] p-1 flex gap-1" role="group" aria-label="Saring tiket">
+            <button type="button" class="tombol-saring flex-1 py-2.5 rounded-lg text-[15px] leading-[22px]" data-status="menunggu" aria-pressed="true">
+              Belum dijawab (<span id="jumlah-menunggu">0</span>)
+            </button>
+            <button type="button" class="tombol-saring flex-1 py-2.5 rounded-lg text-[15px] leading-[22px]" data-status="dijawab" aria-pressed="false">
+              Sudah dijawab (<span id="jumlah-dijawab">0</span>)
+            </button>
+          </div>
+
+          <label for="cari-tiket" class="sr-only">Cari tiket</label>
+          <div class="kotak-isian bg-white border border-garis-pilihan rounded-lg px-3.5 py-2.5 flex items-center gap-2.5">
+            <img src="assets/ikon/search-abu.svg" width="18" height="18" alt="" class="shrink-0" />
+            <input id="cari-tiket" type="search" autocomplete="off"
+              placeholder="Cari kode tiket atau isi pertanyaan"
+              class="flex-1 min-w-0 bg-transparent text-[15px] leading-[22px] placeholder:text-tinta-samar" />
+          </div>
+
+          <ul id="daftar-tiket" class="flex flex-col gap-2.5" aria-label="Daftar tiket"></ul>
+        </div>
+
+        <!-- Detail tiket; filled by petugas.js -->
+        <div id="detail-tiket" tabindex="-1"
+          class="flex-1 min-w-0 bg-white max-lg:border-t border-garis px-4 lg:px-12 pt-6 lg:pt-7 pb-10 flex flex-col gap-6"></div>
+      </section>
+
+      <!-- ===== LAPORAN UNTUK PEMDA ===== -->
+      <section id="tampilan-laporan" class="hidden flex-1">
+        <div class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-8 pb-16 lg:pt-10 flex flex-col gap-8 lg:gap-10">
+
+          <div class="flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-8">
+            <div class="flex-1 flex flex-col gap-2">
+              <h1 class="font-judul font-bold text-[32px] leading-10 lg:text-4xl lg:leading-[44px] tracking-[-0.5px]">
+                Laporan celah informasi
+              </h1>
+              <p class="max-w-[760px] text-[17px] leading-7 text-tinta-lembut">
+                Untuk Disdukcapil dan pemda: layanan yang belum diatur di dokumen resmi, jawaban yang dinilai
+                tidak membantu, dan pertanyaan terbanyak per wilayah.
+              </p>
+            </div>
+            <div class="tidak-dicetak flex items-end gap-2">
+              <div class="flex flex-col gap-1">
+                <label for="periode-laporan" class="text-sm leading-5 font-semibold text-tinta-lembut">Periode</label>
+                <select id="periode-laporan"
+                  class="bg-white border-[1.5px] border-garis-tegas rounded-lg px-3 py-2.5 leading-6 font-semibold">
+                  <option value="7">7 hari terakhir</option>
+                  <option value="30" selected>30 hari terakhir</option>
+                  <option value="90">90 hari terakhir</option>
+                  <option value="0">Semua data</option>
+                </select>
+              </div>
+              <button type="button" id="cetak-laporan" class="tombol-garis px-4 py-2.5 leading-6">
+                <img src="assets/ikon/printer.svg" width="18" height="18" alt="" />
+                Cetak
+              </button>
+            </div>
+          </div>
+
+          <!-- Filled by petugas.js -->
+          <div id="isi-laporan" class="flex flex-col gap-8 lg:gap-10" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="petugas.js"></script>
+  </body>
+</html>

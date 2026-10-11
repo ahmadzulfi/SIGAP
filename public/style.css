@@ -1,0 +1,241 @@
+/* ==========================================================
+   style.css — Tanya Layanan
+   Purpose: supplementary styles that extend Tailwind CSS.
+   Keep this file minimal; prefer Tailwind utility classes.
+   ========================================================== */
+
+/* ---------- Focus: 2 px accent ring + 4 px halo ---------- */
+
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #0369a1; /* cap */
+  outline-offset: 2px;
+}
+
+/* The question boxes draw their own border, so focus moves to the box */
+.kotak-isian:focus-within {
+  border-color: #0369a1; /* cap */
+  box-shadow: 0 0 0 4px rgba(3, 105, 161, 0.18);
+}
+
+.kotak-isian textarea:focus-visible,
+.kotak-isian input:focus-visible {
+  outline: none;
+}
+
+/* ---------- Primary button (Tanyakan, Salin kode, Cek tiket) ---------- */
+
+.tombol-utama {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0369a1; /* cap */
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  transition: background-color 0.15s ease;
+}
+
+.tombol-utama:hover:not(:disabled) {
+  background-color: #075985; /* cap-tua */
+}
+
+.tombol-utama:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Outline buttons (Salin daftar, Cetak, Ya / Tidak, Coba lagi) ---------- */
+
+.tombol-garis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1.5px solid #94a3b8; /* garis-tegas */
+  border-radius: 8px;
+  color: #0f172a; /* tinta */
+  font-weight: 700;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tombol-garis:hover:not(:disabled) {
+  background-color: #f1f5f9; /* abu */
+  border-color: #475569; /* tinta-lembut */
+}
+
+/* ---------- Peristiwa hidup cards (Beranda) ---------- */
+
+.tombol-peristiwa {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* garis */
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tombol-peristiwa:hover:not(:disabled) {
+  border-color: #0369a1; /* cap */
+  box-shadow: 0 4px 16px rgba(15, 23, 41, 0.06);
+}
+
+.tombol-peristiwa:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Ask-back answer options (Web 04) ---------- */
+
+.tombol-pilihan {
+  background-color: #ffffff;
+  border: 1.5px solid #cbd5e1; /* garis-pilihan */
+  border-radius: 12px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tombol-pilihan:hover:not(:disabled),
+.tombol-pilihan[aria-pressed="true"] {
+  background-color: #e0f2fe; /* cap-muda */
+  border-color: #0369a1; /* cap */
+  box-shadow: inset 0 0 0 0.5px #0369a1; /* reads as the 2 px border in the design */
+}
+
+.tombol-pilihan:disabled:not([aria-pressed="true"]) {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Radio ring turns blue on hover and once chosen */
+.tombol-pilihan .radio-nyala,
+.tombol-pilihan:hover:not(:disabled) .radio-mati,
+.tombol-pilihan[aria-pressed="true"] .radio-mati {
+  display: none;
+}
+
+.tombol-pilihan:hover:not(:disabled) .radio-nyala,
+.tombol-pilihan[aria-pressed="true"] .radio-nyala {
+  display: block;
+}
+
+/* ---------- Petugas page: view menu (dark top bar) and status tabs ---------- */
+
+.tautan-tampilan[aria-current="page"] {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.tombol-saring {
+  color: #475569; /* tinta-lembut */
+  font-weight: 500;
+}
+
+.tombol-saring[aria-pressed="true"] {
+  background-color: #ffffff;
+  color: #0f172a; /* tinta */
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Checklist checkbox ("Centang") ---------- */
+
+.centang {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  border: 2px solid #64748b; /* tinta-samar */
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Lucide "check", white on lengkap green */
+.centang:checked {
+  background-color: #15803d; /* lengkap */
+  border-color: #15803d;
+  background-image: url("assets/ikon/check-putih.svg");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.centang:disabled {
+  cursor: default;
+}
+
+/* Ready items fade back so the remaining ones stand out */
+.item-berkas:has(.centang:checked) .teks-berkas {
+  color: #475569; /* tinta-lembut */
+}
+
+/* ---------- Motion: only in response to actions ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .muncul {
+    animation: muncul 0.22s ease;
+  }
+
+  .centang:checked {
+    animation: centang-masuk 0.18s ease;
+  }
+
+  .putar {
+    animation: putar 1s linear infinite;
+  }
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes centang-masuk {
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes putar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Print: only the answer and the checklist ---------- */
+
+@media print {
+  header,
+  footer,
+  .tidak-dicetak {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  #tampilan-percakapan {
+    display: block !important;
+  }
+
+  #panel {
+    margin-top: 1.5rem;
+  }
+}

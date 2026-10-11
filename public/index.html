@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanya Layanan — Persyaratan dokumen kependudukan Bandung Raya</title>
+    <meta
+      name="description"
+      content="Tanyakan berkas yang perlu dibawa untuk KK, KTP-el, KIA, akta kelahiran, dan pindah domisili di Kota Bandung, Kabupaten Bandung, Kabupaten Bandung Barat, dan Kota Cimahi."
+    />
+
+    <!-- Tailwind CSS CDN + design tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- Google Fonts: Public Sans (headings), Atkinson Hyperlegible Next (body), Atkinson Hyperlegible Mono (ticket codes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@700&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Public+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col bg-kertas font-sans text-tinta antialiased">
+
+    <a href="#konten"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50
+             focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg">
+      Langsung ke isi
+    </a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="bg-white">
+      <!-- Info strip: this is an AI assistant, and where its answers come from -->
+      <div class="bg-malam">
+        <p class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 py-1.5 lg:py-2 flex items-center gap-1.5 lg:gap-2
+                  text-xs leading-[18px] lg:text-[13px] lg:leading-5 text-tinta-terang">
+          <img src="assets/ikon/info-strip-hp.svg" width="14" height="14" alt="" class="shrink-0 lg:hidden" />
+          <img src="assets/ikon/info-strip.svg" width="16" height="16" alt="" class="shrink-0 hidden lg:block" />
+          <span class="lg:hidden">Asisten AI · cek lagi sebelum ke kantor layanan</span>
+          <span class="hidden lg:inline">
+            Asisten informasi berbasis AI. Sumber: standar pelayanan dan peraturan Disdukcapil di Bandung Raya.
+            Cek lagi sebelum datang ke kantor layanan.
+          </span>
+        </p>
+      </div>
+
+      <nav aria-label="Navigasi utama" class="border-b border-garis">
+        <div class="mx-auto max-w-konten pl-4 pr-3 lg:px-5 xl:px-0 py-2.5 lg:py-3.5 flex items-center justify-between gap-4">
+          <a href="/" class="min-w-0 flex items-center gap-2.5 lg:gap-3">
+            <span class="shrink-0 bg-cap rounded-[9px] lg:rounded-[10px] size-[34px] lg:size-10 flex items-center justify-center">
+              <img src="assets/ikon/shield-check-hp.svg" width="18" height="18" alt="" class="lg:hidden" />
+              <img src="assets/ikon/shield-check-logo.svg" width="22" height="22" alt="" class="hidden lg:block" />
+            </span>
+            <span class="min-w-0 flex flex-col">
+              <span class="font-judul font-bold text-lg leading-6 lg:text-xl lg:leading-[26px] whitespace-nowrap">Tanya Layanan</span>
+              <span class="hidden md:block text-[13px] leading-[18px] text-tinta-lembut truncate">
+                Persyaratan dokumen kependudukan Bandung Raya
+              </span>
+            </span>
+          </a>
+          <div class="shrink-0 flex items-center gap-2">
+            <a href="/" aria-current="page"
+              class="hidden sm:inline-flex bg-cap-muda text-cap font-bold px-4 py-2.5 rounded-lg whitespace-nowrap">Tanya</a>
+            <a href="cek-tiket.html"
+              class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2.5 rounded-lg font-semibold sm:font-medium
+                     text-[15px] leading-[22px] sm:text-base sm:leading-6 text-tinta-isi hover:bg-abu whitespace-nowrap transition-colors">
+              <img src="assets/ikon/ticket-abu.svg" width="18" height="18" alt="" class="sm:hidden" />
+              Cek tiket
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="konten" class="flex-1">
+
+      <!-- ===== WEB 01: BERANDA ===== -->
+      <div id="tampilan-beranda">
+
+        <!-- Hero: one main action, the question box -->
+        <section class="bg-white border-b border-garis">
+          <div class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-10 pb-12 lg:py-[72px] flex flex-col items-center gap-5 lg:gap-6">
+            <p class="inline-flex items-center gap-2 bg-lengkap-muda text-lengkap-tua rounded-full pl-3 pr-3.5 py-1.5
+                      text-[13px] leading-5 sm:text-sm font-semibold text-center">
+              <img src="assets/ikon/shield-check-hijau.svg" width="16" height="16" alt="" class="shrink-0" />
+              Dijawab dari dokumen resmi, dicek ulang otomatis
+            </p>
+            <h1 class="font-judul font-bold text-center text-[36px] leading-[44px] lg:text-[56px] lg:leading-[64px] tracking-[-0.5px]">
+              Mau urus dokumen apa?
+            </h1>
+            <p class="max-w-[720px] text-center text-lg leading-7 lg:text-xl lg:leading-8 text-tinta-lembut">
+              Ceritakan keadaanmu dengan bahasa sehari-hari. Kamu akan dapat daftar berkas yang perlu dibawa,
+              lengkap dengan sumber resminya.
+            </p>
+
+            <form id="form-tanya" class="w-full max-w-[800px] flex flex-col gap-2.5" novalidate>
+              <label for="input-tanya" class="font-bold">Ceritakan keadaanmu</label>
+
+              <!-- Kotak tanya -->
+              <div class="kotak-isian bg-white border-2 border-cap rounded-2xl pt-5 pl-5 lg:pl-6 pr-4 pb-4 flex flex-col gap-6 lg:gap-7">
+                <textarea
+                  id="input-tanya"
+                  rows="2"
+                  maxlength="500"
+                  placeholder="Contoh: saya baru menikah dan mau bikin KK sendiri"
+                  aria-describedby="petunjuk-nik galat-tanya"
+                  class="w-full resize-none bg-transparent text-lg leading-7 placeholder:text-tinta-samar"
+                ></textarea>
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <p id="petunjuk-nik" class="flex items-center gap-1.5 text-sm leading-5 text-tinta-lembut">
+                    <img src="assets/ikon/lock-16.svg" width="16" height="16" alt="" class="shrink-0" />
+                    Jangan tulis NIK atau data pribadi lain.
+                  </p>
+                  <button type="submit" class="tombol-utama max-sm:w-full px-7 py-3.5 text-lg leading-6">
+                    Tanyakan
+                    <img src="assets/ikon/send.svg" width="18" height="18" alt="" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- Inline validation message -->
+              <p id="galat-tanya" class="hidden text-sm font-semibold text-galat" role="alert"></p>
+            </form>
+          </div>
+        </section>
+
+        <div class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-12 pb-16 lg:pt-16 lg:pb-20 flex flex-col gap-12 lg:gap-16">
+
+          <!-- Peristiwa hidup: one click sends a ready-made question -->
+          <section aria-labelledby="judul-peristiwa" class="flex flex-col gap-5">
+            <div class="flex flex-col gap-1">
+              <h2 id="judul-peristiwa" class="font-judul font-bold text-2xl leading-8 lg:text-[28px] lg:leading-9">
+                Atau mulai dari peristiwa yang kamu alami
+              </h2>
+              <p class="text-tinta-lembut">Klik salah satu, pertanyaannya langsung dikirim ke AI.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="Saya baru menikah, dokumen apa yang perlu diurus?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/heart.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Menikah</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">KK baru, perubahan status di KTP-el</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="Anak saya baru lahir, dokumen apa yang perlu diurus?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/baby.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Punya anak</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">Akta kelahiran, tambah anggota KK, KIA</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="Saya mau pindah rumah, dokumen apa yang perlu diurus?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/truck.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Pindah rumah</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">Pindah keluar atau pindah datang</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="KK atau KTP-el saya hilang atau rusak, bagaimana menggantinya?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/file-x.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Dokumen hilang atau rusak</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">KK atau KTP-el pengganti</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="Saya mau mengganti data di KK atau KTP-el, apa syaratnya?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/pencil.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Ganti data</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">Nama, alamat, atau status di KK dan KTP-el</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+              <button type="button" class="tombol-peristiwa"
+                data-pertanyaan="Saya mau pisah KK, apa syaratnya?">
+                <span class="shrink-0 bg-cap-muda rounded-xl size-12 flex items-center justify-center">
+                  <img src="assets/ikon/users.svg" width="24" height="24" alt="" />
+                </span>
+                <span class="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <span class="font-bold text-lg leading-[26px]">Pisah KK</span>
+                  <span class="text-sm leading-5 text-tinta-lembut">KK baru terpisah atau ganti kepala keluarga</span>
+                </span>
+                <img src="assets/ikon/arrow-right-abu.svg" width="20" height="20" alt="" class="shrink-0" />
+              </button>
+            </div>
+          </section>
+
+          <!-- Cara kerja & cakupan -->
+          <div class="grid lg:grid-cols-2 gap-6">
+            <section aria-labelledby="judul-cara-kerja"
+              class="bg-white border border-garis rounded-2xl p-6 lg:p-8 flex flex-col gap-6">
+              <h2 id="judul-cara-kerja" class="font-judul font-bold text-2xl leading-8">Cara kerjanya</h2>
+              <ol class="flex flex-col gap-6">
+                <li class="flex gap-4 items-start">
+                  <span class="shrink-0 bg-abu rounded-xl size-11 flex items-center justify-center">
+                    <img src="assets/ikon/message.svg" width="22" height="22" alt="" />
+                  </span>
+                  <span class="flex-1 flex flex-col gap-0.5">
+                    <span class="font-bold text-[17px] leading-[26px]">1. Kamu bercerita</span>
+                    <span class="text-[15px] leading-6 text-tinta-lembut">Tulis keadaanmu atau pilih peristiwa hidup.</span>
+                  </span>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="shrink-0 bg-abu rounded-xl size-11 flex items-center justify-center">
+                    <img src="assets/ikon/list-checks-abu.svg" width="22" height="22" alt="" />
+                  </span>
+                  <span class="flex-1 flex flex-col gap-0.5">
+                    <span class="font-bold text-[17px] leading-[26px]">2. AI menyusun daftar berkas</span>
+                    <span class="text-[15px] leading-6 text-tinta-lembut">
+                      Diambil dari standar pelayanan dan peraturan Disdukcapil di daerahmu, lalu dicek ulang otomatis.
+                    </span>
+                  </span>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="shrink-0 bg-abu rounded-xl size-11 flex items-center justify-center">
+                    <img src="assets/ikon/user-abu.svg" width="22" height="22" alt="" />
+                  </span>
+                  <span class="flex-1 flex flex-col gap-0.5">
+                    <span class="font-bold text-[17px] leading-[26px]">3. Petugas membantu kalau AI ragu</span>
+                    <span class="text-[15px] leading-6 text-tinta-lembut">Kamu dapat kode tiket untuk melihat jawaban petugas.</span>
+                  </span>
+                </li>
+              </ol>
+            </section>
+
+            <section aria-labelledby="judul-cakupan"
+              class="bg-white border border-garis rounded-2xl p-6 lg:p-8 flex flex-col gap-5">
+              <h2 id="judul-cakupan" class="font-judul font-bold text-2xl leading-8">Yang bisa ditanyakan di sini</h2>
+              <ul class="flex flex-wrap gap-2 text-[15px] leading-[22px] font-semibold text-cap-tua">
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">Kartu Keluarga</li>
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">KTP-el</li>
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">Kartu Identitas Anak (KIA)</li>
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">Akta Kelahiran</li>
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">Pindah keluar</li>
+                <li class="bg-cap-muda rounded-full px-3.5 py-2">Pindah datang</li>
+              </ul>
+              <p class="text-[15px] leading-6 text-tinta-lembut">
+                Untuk warga Kota Bandung, Kabupaten Bandung, Kabupaten Bandung Barat, dan Kota Cimahi.
+                KK mencakup: baru, pisah KK, ganti kepala keluarga, perubahan data, hilang atau rusak.
+                KTP-el mencakup: baru, pindah datang, perubahan data, hilang atau rusak.
+              </p>
+              <p class="bg-abu rounded-[10px] px-4 py-3 flex gap-2.5 items-start text-sm leading-[22px] text-tinta-isi">
+                <img src="assets/ikon/info-abu.svg" width="18" height="18" alt="" class="shrink-0 mt-0.5" />
+                Paspor, SIM, atau BPJS belum bisa dijawab di sini. AI akan mengarahkanmu ke instansi yang tepat.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== WEB 02–06: PERCAKAPAN ===== -->
+
+      <!-- Phone only: sticky pill that jumps to the checklist; filled by script.js -->
+      <a id="lompat-map" href="#panel"
+        class="hidden lg:!hidden tidak-dicetak sticky top-0 z-10 bg-lengkap-muda border-b border-lengkap-garis
+               px-4 py-2.5 items-center gap-2.5 text-sm leading-5 font-bold text-lengkap-tua">
+        <img src="assets/ikon/folder-hijau-tua.svg" width="18" height="18" alt="" class="shrink-0" />
+        <span id="teks-lompat-map" class="flex-1"></span>
+        <img src="assets/ikon/chevron-down.svg" width="18" height="18" alt="" class="shrink-0" />
+      </a>
+
+      <!-- Desktop: conversation left (700 px), panel right; phone: answer, panel, then a composer that sticks to the bottom -->
+      <section id="tampilan-percakapan" aria-label="Percakapan"
+        class="hidden mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-5 lg:pt-10 lg:pb-20
+               grid gap-5 lg:gap-x-12 lg:gap-y-6 lg:grid-cols-[700px_minmax(0,1fr)] lg:grid-rows-[auto_1fr]">
+
+        <div id="percakapan" class="lg:col-start-1 lg:row-start-1 flex flex-col gap-5 lg:gap-6"></div>
+
+        <aside id="panel" aria-label="Yang perlu dibawa"
+          class="lg:col-start-2 lg:row-start-1 lg:row-span-2 self-start min-w-0 lg:sticky lg:top-6 scroll-mt-14"></aside>
+
+        <!-- Pertanyaan lanjutan -->
+        <form id="form-lanjutan" novalidate
+          class="tidak-dicetak lg:col-start-1 lg:row-start-2 self-start flex flex-col gap-1.5 lg:gap-2
+                 max-lg:sticky max-lg:bottom-0 max-lg:z-10 max-lg:-mx-4 max-lg:px-4 max-lg:pt-3 max-lg:pb-4
+                 max-lg:bg-white max-lg:border-t max-lg:border-garis max-lg:shadow-komposer">
+          <label for="input-lanjutan" class="max-lg:sr-only text-[15px] leading-[22px] font-semibold text-tinta-isi">
+            Pertanyaan lanjutan
+          </label>
+          <div id="kotak-lanjutan"
+            class="kotak-isian bg-white border-[1.5px] border-garis-tegas rounded-xl pl-4 lg:pl-5 pr-1.5 lg:pr-2 py-1.5 lg:py-2
+                   flex items-center gap-2 lg:gap-3 transition-opacity">
+            <input
+              id="input-lanjutan"
+              type="text"
+              maxlength="500"
+              autocomplete="off"
+              placeholder="Tanya lagi, misalnya: kalau beda kota bagaimana?"
+              aria-describedby="petunjuk-lanjutan galat-lanjutan"
+              class="flex-1 min-w-0 bg-transparent placeholder:text-tinta-samar"
+            />
+            <button type="submit" aria-label="Tanyakan"
+              class="tombol-utama shrink-0 px-3.5 lg:px-5 py-3 leading-6">
+              <span class="hidden lg:inline">Tanyakan</span>
+              <img src="assets/ikon/send.svg" width="18" height="18" alt="" />
+            </button>
+          </div>
+          <p id="petunjuk-lanjutan" class="flex items-center gap-1.5 text-xs leading-[18px] lg:text-[13px] lg:leading-5 text-tinta-lembut">
+            <img src="assets/ikon/lock-hp.svg" width="13" height="13" alt="" class="shrink-0 lg:hidden" />
+            <img src="assets/ikon/lock-14.svg" width="14" height="14" alt="" class="shrink-0 hidden lg:block" />
+            Jangan tulis NIK atau data pribadi lain.
+          </p>
+          <!-- Region the answers are for; filled by script.js -->
+          <p id="info-wilayah" class="hidden text-[13px] leading-5 text-tinta-lembut">
+            Daerahmu: <span id="nama-wilayah" class="font-semibold text-tinta"></span> ·
+            <button type="button" id="ganti-wilayah" class="text-cap font-semibold underline">Ganti</button>
+          </p>
+          <p id="galat-lanjutan" class="hidden text-sm font-semibold text-galat" role="alert"></p>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-malam mt-auto">
+      <div class="mx-auto max-w-konten px-4 lg:px-5 xl:px-0 pt-7 pb-8 lg:pt-12 flex flex-col gap-6 lg:gap-8">
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-12">
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/phone-footer-hp.svg" width="18" height="18" alt="" class="shrink-0 lg:hidden" />
+              <img src="assets/ikon/phone-footer.svg" width="20" height="20" alt="" class="shrink-0 hidden lg:block" />
+              Butuh bantuan?
+            </h2>
+            <!-- Kanal resmi from the "Informasi Umum" sections of each region in kb/ -->
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">Hubungi Disdukcapil di daerahmu:</p>
+            <ul class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              <li>
+                <span class="font-semibold text-white">Kota Bandung</span> —
+                <a href="tel:+62224209891" class="text-cap-terang underline">(022) 4209891</a>,
+                <a href="mailto:disdukcapilkotabdg@gmail.com" class="text-cap-terang underline break-words">disdukcapilkotabdg@gmail.com</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kota Cimahi</span> —
+                <a href="tel:+62226631885" class="text-cap-terang underline">(022) 6631885</a>, SMS PESDUK
+                <a href="sms:081221700800" class="text-cap-terang underline">081221700800</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kabupaten Bandung</span> —
+                <a href="https://disdukcapil.bandungkab.go.id" target="_blank" rel="noopener" class="text-cap-terang underline">disdukcapil.bandungkab.go.id</a>
+              </li>
+              <li>
+                <span class="font-semibold text-white">Kabupaten Bandung Barat</span> —
+                <a href="https://disdukcapil.bandungbaratkab.go.id" target="_blank" rel="noopener" class="text-cap-terang underline break-words">disdukcapil.bandungbaratkab.go.id</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/file-text-footer-hp.svg" width="18" height="18" alt="" class="shrink-0 lg:hidden" />
+              <img src="assets/ikon/file-text-footer.svg" width="20" height="20" alt="" class="shrink-0 hidden lg:block" />
+              Sumber informasi
+            </h2>
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              Standar pelayanan dan peraturan Disdukcapil Kota Bandung, Kabupaten Bandung, Kabupaten Bandung
+              Barat, dan Kota Cimahi. AI bisa keliru, jadi cek lagi sebelum datang ke kantor layanan.
+            </p>
+          </div>
+          <div class="flex-1 flex flex-col gap-2 lg:gap-2.5">
+            <h2 class="flex items-center gap-2 lg:gap-2.5 font-judul font-semibold text-white text-base leading-6 lg:text-lg lg:leading-[26px]">
+              <img src="assets/ikon/lock-footer.svg" width="20" height="20" alt="" class="shrink-0" />
+              Jaga data pribadimu
+            </h2>
+            <p class="text-sm leading-[22px] lg:text-[15px] lg:leading-6 text-tinta-terang">
+              Jangan tulis NIK, nomor KK, atau alamat lengkap di kolom pertanyaan. Yang dibutuhkan hanya keadaanmu,
+              bukan identitasmu.
+            </p>
+          </div>
+        </div>
+        <div class="h-px bg-tinta-garis"></div>
+        <p class="text-[13px] leading-5 text-tinta-redup">
+          Prototipe Tanya Layanan · Bandung Raya · Bukan situs resmi pemerintah
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== TEMPLATE: "Yang bisa ditanyakan di sini" panel (Web 05, errors) ===== -->
+    <template id="tpl-cakupan">
+      <div class="bg-white border border-garis rounded-2xl p-5 lg:p-6 flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <span class="shrink-0 bg-cap-muda rounded-[10px] size-10 flex items-center justify-center">
+            <img src="assets/ikon/list-checks-aksen.svg" width="20" height="20" alt="" />
+          </span>
+          <h2 class="flex-1 font-judul font-bold text-[19px] leading-[26px]">Yang bisa ditanyakan di sini</h2>
+        </div>
+        <p class="text-sm leading-5 text-tinta-lembut">
+          Untuk warga Kota Bandung, Kabupaten Bandung, Kabupaten Bandung Barat, dan Kota Cimahi.
+        </p>
+        <ul>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 flex flex-col gap-0.5">
+              <span class="font-semibold">Kartu Keluarga</span>
+              <span class="text-sm leading-5 text-tinta-lembut">Baru, pisah KK, ganti kepala keluarga, perubahan data, hilang atau rusak</span>
+            </span>
+          </li>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 flex flex-col gap-0.5">
+              <span class="font-semibold">KTP-el</span>
+              <span class="text-sm leading-5 text-tinta-lembut">Baru, pindah datang, perubahan data, hilang atau rusak</span>
+            </span>
+          </li>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 font-semibold">Kartu Identitas Anak (KIA)</span>
+          </li>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 font-semibold">Akta Kelahiran</span>
+          </li>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 font-semibold">Pindah keluar</span>
+          </li>
+          <li class="border-b border-garis py-3 flex gap-3 items-start">
+            <img src="assets/ikon/check-hijau-18.svg" width="18" height="18" alt="" class="shrink-0 mt-[3px]" />
+            <span class="flex-1 font-semibold">Pindah datang</span>
+          </li>
+        </ul>
+        <p class="bg-abu rounded-[10px] px-3.5 py-3 flex gap-2.5 items-start text-sm leading-[22px] text-tinta-isi">
+          <img src="assets/ikon/x.svg" width="18" height="18" alt="" class="shrink-0 mt-0.5" />
+          Belum bisa: paspor, SIM, BPJS, dan layanan di luar Disdukcapil.
+        </p>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
